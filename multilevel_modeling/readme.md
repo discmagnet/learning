@@ -1,6 +1,4 @@
-ReadMe for Multilevel Modeling
-
-Formulas for Different Types of Mixed Effect Models
+## Formulas for Different Types of Mixed Effect Models
 
   * `y ~ 1` is the intercept-only model
   * `y ~ x` is a typical regression model with a single fixed effect
