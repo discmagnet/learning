@@ -166,29 +166,27 @@ lrtest(model01,model03)
 # Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 #-----------------------------------------------------------------------------------
 # (9) Add interactions between the school dummies and SES
-model04 <- lm(data = hsb, formula = mathach ~ ses*S1288 + ses*S1296 + 
-                ses*S1308 + ses*S1317)
+model04 <- lm(data = hsb, formula = mathach ~ ses*factor(schoolid))
 summary(model04)
 # Call:
-# lm(formula = mathach ~ ses * S1288 + ses * S1296 + ses * S1308 + 
-#      ses * S1317, data = hsb)
+# lm(formula = mathach ~ ses * factor(schoolid), data = hsb)
 # 
 # Residuals:
 #      Min       1Q   Median       3Q      Max 
 # -15.6483  -4.4246  -0.8679   4.6355  16.0444 
 # 
 # Coefficients:
-#             Estimate Std. Error t value Pr(>|t|)    
-# (Intercept)    10.8051     1.1181   9.664   <2e-16 ***
-# ses             2.5086     1.4761   1.700   0.0910 .  
-# S1288TRUE       2.3098     1.6976   1.361   0.1753    
-# S1296TRUE      -2.7114     1.5603  -1.738   0.0840 .  
-# S1308TRUE       5.3838     2.3949   2.248   0.0258 *  
-# S1317TRUE       1.9326     1.5477   1.249   0.2134    
-# ses:S1288TRUE   0.7469     2.4181   0.309   0.7578    
-# ses:S1296TRUE  -1.4326     2.0452  -0.700   0.4845    
-# ses:S1308TRUE  -2.3826     3.3458  -0.712   0.4773    
-# ses:S1317TRUE  -1.2347     2.2116  -0.558   0.5774    
+#                          Estimate Std. Error t value Pr(>|t|)    
+# (Intercept)               10.8051     1.1181   9.664   <2e-16 ***
+# ses                        2.5086     1.4761   1.700   0.0910 .  
+# factor(schoolid)1288       2.3098     1.6976   1.361   0.1753    
+# factor(schoolid)1296      -2.7114     1.5603  -1.738   0.0840 .  
+# factor(schoolid)1308       5.3838     2.3949   2.248   0.0258 *  
+# factor(schoolid)1317       1.9326     1.5477   1.249   0.2134    
+# ses:factor(schoolid)1288   0.7469     2.4181   0.309   0.7578    
+# ses:factor(schoolid)1296  -1.4326     2.0452  -0.700   0.4845    
+# ses:factor(schoolid)1308  -2.3826     3.3458  -0.712   0.4773    
+# ses:factor(schoolid)1317  -1.2347     2.2116  -0.558   0.5774    
 # ---
 # Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 # 
