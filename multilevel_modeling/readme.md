@@ -9,3 +9,8 @@
     + `(x|a)` is a model with both random intercepts and random slopes
     + `(0+x|a)` is a random-slope-only model
   * `y ~ x + (1|a)` is a mixed effects model (both fixed and random effects)
+  
+## Useful links
+
+  * [Difference between nested and crossed random effects and how they are specified in lme4](https://stats.stackexchange.com/questions/228800/crossed-vs-nested-random-effects-how-do-they-differ-and-how-are-they-specified?newreg=6fcfb7321a334ac5bfa68ec236d750b5)
+  
